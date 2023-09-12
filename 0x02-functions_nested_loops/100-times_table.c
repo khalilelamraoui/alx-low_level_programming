@@ -23,7 +23,8 @@ void print_times_table(int n)
 			for (j = 1; j <= n; j++)
 			{
 				result = (i * j);
-				if (((result / 10) > 0) && ((result / 10) <= 9))
+				if (((result / 10) > 0) && 
+				((result / 10) <= 9))
 				{
 					_putchar(' ');
 					_putchar(' ');
