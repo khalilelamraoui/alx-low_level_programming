@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-    int count;
-    unsigned long fib1 = 0, fib2 = 1, sum;
+	int count;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 	unsigned long fib11, fib12, fib22, fib21;
 	unsigned long half1, half2;
 
