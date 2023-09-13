@@ -20,7 +20,7 @@ int main(void)
 		}
 		else
 		{
-			printf("\n");
+			printf("...\n");
 		}
 
 		first = second;
