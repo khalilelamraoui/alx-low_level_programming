@@ -7,8 +7,8 @@
  */
 int main(void)
 {
-	long long int first = 1, second = 2, next;
-	long long int sum = 0;
+	long int first = 1, second = 2, next;
+	long int sum = 0;
 
 	while (second <= 4000000)
 	{
@@ -22,7 +22,7 @@ int main(void)
 		second = next;
 	}
 
-	printf("%lld\n", sum);
+	printf("%ld\n", sum);
 
     return (0);
 }
