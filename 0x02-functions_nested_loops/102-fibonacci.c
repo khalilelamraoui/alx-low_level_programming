@@ -9,7 +9,7 @@ int main(void)
 {
 	int count;
 	long int first = 1, second = 2, next;
-	
+
 	for (count = 0; count < 50; count++)
 	{
 		if (count == 49)
