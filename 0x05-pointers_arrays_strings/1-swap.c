@@ -1,12 +1,10 @@
 #include"main.h"
 /**
- * swap_int: function to swap two ints
- * description: function that takes two ints 
- * 		and swap them
- * @a: first int to swap with @b
- * @b: second int to swap with @a
- *
- * return: void
+ * swap_int - Prints swap of two ints.
+ * @a: The integer to be swapped.
+ * @b: The integer to be swapped
+ * description: function that swaps two integers
+ * Return: void
  */
 void swap_int(int *a, int *b)
 {
