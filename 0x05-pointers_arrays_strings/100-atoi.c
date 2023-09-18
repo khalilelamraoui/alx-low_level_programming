@@ -1,53 +1,39 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * _atoi - Converts a string to an integer.
- * @s: The input string.
- *
- * Description: function that converts string to ints
- * Return: The integer converted from the string.
- */
+* _atoi - converts string to ints
+* @s: string to change
+*
+* Return: result
+*/
 int _atoi(char *s)
 {
-    int result = 0;
-	int sign = 1;
-	int digit;
-	int digit_found = 0;
+	int i = 0, minus = 0, result = 0;
+	int len = 0, is_digit = 0, digit = 0;
 
-	while (*s)
-    {
-        if (*s == ' ')
-		{
-			if (digit_found)
-				break;
-		}
-		else if (*s == '-' || *s == '+')
-		{
-			if (digit_found)
-				break;
-			sign = (*s == '-') ? -1 : 1;
-		}
-		else if (*s >= '0' && *s <= '9')
-		{
-			digit_found = 1;
-			digit = *s - '0';
+	while (s[len] != '\0')
+		len++;
 
-			if (result > (2147483647 - digit) / 10)
-			{
-				if (sign == 1)
-					return 2147483647;
-				else
-					return -2147483648;
-			}
+	while (i < len && is_digit == 0)
+	{
+		if (s[i] == '-')
+			++minus;
 
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			digit = s[i] - '0';
+			if (minus % 2)
+				digit = -digit;
 			result = result * 10 + digit;
+			is_digit = 1;
+			if (s[i + 1] < '0' || s[i + 1] > '9')
+				break;
+			is_digit = 0;
 		}
-		else if (digit_found)
-		{
-			break;
-		}
-
-		s++;
+		i++;
 	}
 
-	return result * sign;
+	if (is_digit == 0)
+		return (0);
+
+	return (result);
 }
