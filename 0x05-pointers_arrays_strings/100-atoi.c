@@ -8,21 +8,23 @@
  */
 int _atoi(char *s)
 {
-	int result = 0;
+    int result = 0;
 	int sign = 1;
 	int digit;
 	int digit_found = 0;
 
 	while (*s)
-	{
-		if (*s == ' ')
+    {
+        if (*s == ' ')
 		{
 			if (digit_found)
 				break;
 		}
-		else if (*s == '-')
+		else if (*s == '-' || *s == '+')
 		{
-			sign = -1;
+			if (digit_found)
+				break;
+			sign = (*s == '-') ? -1 : 1;
 		}
 		else if (*s >= '0' && *s <= '9')
 		{
