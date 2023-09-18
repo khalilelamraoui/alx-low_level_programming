@@ -1,24 +1,22 @@
 #include"main.h"
 #include <stdlib.h>
 #include <time.h>
-
-char RandomCharacter()
+int main(void)
 {
-	const char charset[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-	int i = rand() % (sizeof(charset) - 1);
-	return charset[i];
-}
+	char password;
+	int sum, diff;
 
-int main() {
-	int i, password_length = 15;
 	srand(time(NULL));
 
-	for (i = 0; i < password_length; i++)
+	while (sum <= 2645)
 	{
-		char randomChar = RandomCharacter();
-		putchar(randomChar);
+		password = rand() % 120;
+		sum += password;
+		putchar(password);
 	}
-	putchar('\n');
 
-	return 0;
+	diff = 2772 - sum;
+	putchar(diff);
+
+	return (0);
 }
