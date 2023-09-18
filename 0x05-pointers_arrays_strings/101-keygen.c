@@ -10,10 +10,10 @@ char RandomCharacter()
 }
 
 int main() {
-	int password_length = 15;
+	int i, password_length = 15;
 	srand(time(NULL));
 
-	for (int i = 0; i < password_length; i++)
+	for (i = 0; i < password_length; i++)
 	{
 		char randomChar = RandomCharacter();
 		putchar(randomChar);
