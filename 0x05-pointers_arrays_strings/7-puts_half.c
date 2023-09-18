@@ -1,6 +1,6 @@
 #include"main.h"
 /**
- * _puts - Prints string
+ * puts_half - Prints string
  * @str: The string for length calculation
  * description: function that prints half-string
  * Return: void
