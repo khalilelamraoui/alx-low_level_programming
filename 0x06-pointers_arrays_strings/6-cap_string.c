@@ -7,15 +7,12 @@
  */
 char *cap_string(char *str)
 {
-	int word = 0, i, is_separator;
-	char separators[] = " \t\n,;.!?\"(){}";
-	char current_char;
-	int capitalize = 1;
+	int word = 0, i, is_separator, capitalize = 1;
+	char separators[] = " \t\n,;.!?\"(){}", current_char;
 
 	while (str[word] != '\0')
 	{
 		current_char = str[word];
-
 		if (capitalize && current_char >= 'a' && current_char <= 'z')
 		{
 			str[word] -= 32;
@@ -38,7 +35,6 @@ char *cap_string(char *str)
 		{
 			capitalize = 1;
 		}
-
 		word++;
 	}
 	return (str);
