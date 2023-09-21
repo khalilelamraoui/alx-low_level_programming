@@ -16,13 +16,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	char temp;
 
 	while (n1[len1] != '\0')
-	{
 		len1++;
-	}
 	while (n2[len2] != '\0')
-	{
 		len2++;
-	}
 	if (len1 > size_r || len2 > size_r)
 		return (0);
 	i = len1 - 1;
