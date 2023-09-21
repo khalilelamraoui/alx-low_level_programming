@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-*leet - entry-point
-*@str: string
-*Description: function that converts aetolAETOL
-*to 4307143071 respectively
-*Return:returns changed values of aeotlAEOTL
+* leet - entry-point
+* @str: string
+* Description: function that converts aetolAETOL
+* to 4307143071 respectively
+* Return:returns changed values of aeotlAEOTL
 */
 char *leet(char *str)
 {
