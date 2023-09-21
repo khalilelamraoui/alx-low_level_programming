@@ -6,7 +6,7 @@
  */
 void print_number(int n)
 {
-	int div, modulo;
+	int division, modulo;
 
 	division = n / 10;
 	modulo = n % 10;
