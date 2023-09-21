@@ -1,41 +1,30 @@
-#include"main.h"
+#include "main.h"
 /**
- * cap_string - entry point
- * @str: string to capitalize
- * description: function that capitalizes string
- * Return: result
- */
+*cap_string - entry-point
+*@s: string to capitalize
+*Description: function that capitalizes first character
+*Return:returns the capitalized string
+*/
 char *cap_string(char *str)
 {
-	int word = 0, i, is_separator, capitalize = 1;
-	char separators[] = " \t\n,;.!?\"(){}", current_char;
+	char separators[] = " \t\n,;.!?\"(){}";
+	int i = 1, j;
 
-	while (str[word] != '\0')
+	if (str[0] >= 'a' && str[0] <= 'z')
 	{
-		current_char = str[word];
-		if (capitalize && current_char >= 'a' && current_char <= 'z')
+		str[0] -= ('a' - 'A');
+	}
+	while (str[i] != '\0')
+	{
+		for (j = 0; separators[j] != '\0'; j++)
 		{
-			str[word] -= 32;
-			capitalize = 0;
-		}
-		else if (!capitalize && current_char == '.')
-		{
-			capitalize = 1;
-        	}
-		is_separator = 0;
-		for (i = 0; separators[i] != '\0'; i++)
-		{
-			if (current_char == separators[i])
+			if (str[i - 1] == separators[j] &&
+			(str[i] >= 'a' && str[i] <= 'z'))
 			{
-				is_separator = 1;
-				break;
+				str[i] -= ('a' - 'A');
 			}
 		}
-		if (is_separator)
-		{
-			capitalize = 1;
-		}
-		word++;
+		i++;
 	}
 	return (str);
 }
