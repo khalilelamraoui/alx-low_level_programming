@@ -1,11 +1,14 @@
-#include"main.h"
- /*
-  * print_buffer: function that prints buffer
-  * @b: buffer
-  * @size: size wanted
-  * return: void
-  */
-void print_buffer(char *b, int size) {
+#include "main.h"
+/**
+ * print_buffer - Prints a buffer in a specific format.
+ * @b: The buffer to be printed.
+ * @size: The size of the buffer to be printed.
+ *
+ * Description: This function prints the contents of a buffer in a specific
+ * format. It displays the hexadecimal values and ASCII characters.
+ */
+void print_buffer(char *b, int size)
+{
 	int i, j;
 
 	if (size <= 0)
