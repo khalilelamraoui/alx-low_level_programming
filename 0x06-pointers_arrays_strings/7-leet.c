@@ -2,7 +2,7 @@
 /**
 *leet - entry-point
 *@str: string
-*Description: function that converts aetolAETOL 
+*Description: function that converts aetolAETOL
 *to 4307143071 respectively
 *Return:returns changed values of aeotlAEOTL
 */
