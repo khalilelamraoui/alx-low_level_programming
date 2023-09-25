@@ -1,10 +1,10 @@
 #include"main.h"
-/*
- * _memcpy: function that returns copy of string
- * @dest: destination
- * @src: source
- * @n: size of elements
- * return: result
+/**
+ * _memcpy - function that copies s elements to dest.
+ * @src: string to work on
+ * @dest: char destination
+ * @n: number of first elements wanted
+ * Return: result : dest.
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
