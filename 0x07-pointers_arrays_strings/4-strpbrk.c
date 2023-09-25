@@ -8,8 +8,8 @@
  *         NULL if no such byte is found.
  */
 char *_strpbrk(char *s, char *accept)
-{ 
- 	int i, j;
+{
+	int i, j;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
