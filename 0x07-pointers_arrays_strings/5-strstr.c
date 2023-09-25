@@ -7,7 +7,7 @@
  * Return: pointer to beginning of located substring,
  * or NULL if substring isn't found.
  */
-char *_strstr(char *haystack, char *needle) 
+char *_strstr(char *haystack, char *needle)
 {
 	int i, j;
 
@@ -27,5 +27,5 @@ char *_strstr(char *haystack, char *needle)
 				return (&haystack[i]);
 		}
 	}
-    return NULL;
+	return (NULL);
 }
