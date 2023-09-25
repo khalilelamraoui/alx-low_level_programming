@@ -5,7 +5,7 @@
  * @size: The size of square matrix.
  */
 void print_diagsums(int *a, int size)
-{ 
+{
 	int i, j;
 	int sum1 = 0, sum2 = 0;
 
