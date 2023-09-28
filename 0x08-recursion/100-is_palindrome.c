@@ -15,7 +15,7 @@ int isPalRec(char *s, int a, int b)
 	if (s[a] != s[b])
 		return (0);
 	if (a < b + 1)
-		return isPalRec(s, a + 1, b - 1);
+		return (isPalRec(s, a + 1, b - 1));
 	return (1);
 }
 /**
@@ -30,5 +30,5 @@ int is_palindrome(char *s)
 
 	if (n == 0)
 		return (1);
-	return isPalRec(s, 0, n - 1);
+	return (isPalRec(s, 0, n - 1));
 }
