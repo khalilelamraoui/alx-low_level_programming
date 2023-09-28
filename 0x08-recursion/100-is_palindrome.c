@@ -19,7 +19,7 @@ int isPalRec(char *s, int a, int b)
 	return (1);
 }
 /**
- * isPalindrome - Checks if a string is a palindrome.
+ * is_palindrome - Checks if a string is a palindrome.
  * @s: The string to be checked.
  *
  * Return: 1 if the string is a palindrome, 0 otherwise.
