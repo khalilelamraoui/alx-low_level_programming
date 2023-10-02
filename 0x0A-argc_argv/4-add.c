@@ -5,14 +5,18 @@
  * @argc: The number of command-line arguments.
  * @argv: An array of strings containing the command-line arguments.
  * Description:
- * This program adds positive numbers passed as command-line arguments and prints the result.
+ * This program adds positive numbers passed as command-line
+ * arguments and prints the result.
  * If no number is passed, it prints 0.
- * If any argument contains non-digit characters, it prints "Error" and returns 1.
+ * If any argument contains non-digit characters, it prints "Error"
+ * and returns 1.
  * Return:
  * - 0 if successful.
- * - 1 if an error occurs (e.g., incorrect number of arguments or non-digit characters).
+ * - 1 if an error occurs (e.g., incorrect number of arguments
+ *   or non-digit characters).
  */
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
 	int i, sum = 0;
 	char *currentArg, *ptr;
 	long currentNum;
