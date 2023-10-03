@@ -1,19 +1,18 @@
 #include"main.h"
 /**
- * _memcpy - function that copies s elements to dest.
- * @src: string to work on
- * @dest: char destination
- * @n: number of first elements wanted
- * Return: result : dest.
+ * _strchr - function that finds first occurrence of a character
+ * and return a pointer to the rest of the string
+ * @s: string to work on
+ * @c: char wanted to check
+ * Return: result : s.
  */
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_strchr(char *s, char c)
 {
-	unsigned int i;
-	char *result = dest;
-
-	for (i = 0; i < n; i++)
+	while (*s != '\0')
 	{
-		dest[i] = src[i];
+		if (*s == c)
+			return (s);
+		s++;
 	}
-	return (result);
+	return (NULL);
 }
