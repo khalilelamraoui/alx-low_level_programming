@@ -12,17 +12,17 @@ char **strtow(char *str)
 	char **words = NULL;
 
 	if (str == NULL || *str == '\0')
-		return NULL;
+		return (NULL);
 	for (i = 0; i < len; i++)
 	{
 		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			num_words++;
 	}
 	if (num_words == 0)
-		return NULL;
+		return (NULL);
 	words = (char **)malloc((num_words + 1) * sizeof(char *));
 	if (words == NULL)
-		return NULL;
+		return (NULL);
 	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
@@ -36,7 +36,7 @@ char **strtow(char *str)
 					for (j = 0; j < index; j++)
 						free(words[j]);
 					free(words);
-					return NULL;
+					return (NULL);
 				}
 				strncpy(words[index], str + start, length);
 				words[index][length] = '\0';
@@ -46,5 +46,5 @@ char **strtow(char *str)
 		}
 	}
 	words[num_words] = NULL;
-	return words;
+	return (words);
 }
