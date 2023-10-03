@@ -8,37 +8,37 @@
  */
 char *argstostr(int ac, char **av)
 {
-        int i, length = 0, id = 0;
-        char *arg, *result;
+	int i, length = 0, id = 0;
+	char *arg, *result;
 
-        if (ac == 0 || av == NULL)
-                return (NULL);
-        for (i = 0; i < ac; i++)
-        {
-                arg = av[i];
-                while (*arg != '\0')
-                {
-                        length++;
-                        arg++;
-                }
-                length++;
-        }
-        result = (char *)malloc(sizeof(char) * length);
-        if (result == NULL)
-                return (NULL);
-        for (i = 0; i < ac; i++)
-        {
-                arg = av[i];
-                while (*arg != '\0')
-                {
-                        result[id] = *arg;
-                        id++;
-                        arg++;
-                }
-                result[id] = '\n';
-                id++;
-        }
-        result[id - 1] = '\0';
-        result[i] = '\n';
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+		arg = av[i];
+		while (*arg != '\0')
+		{
+			length++;
+			arg++;
+		}
+		length++;
+	}
+	length++;
+	result = (char *)malloc(sizeof(char) * length);
+	if (result == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+		arg = av[i];
+		while (*arg != '\0')
+		{
+			result[id] = *arg;
+			id++;
+			arg++;
+		}
+		result[id] = '\n';
+		id++;
+	}
+	result[id - 1] = '\0';
 	return (result);
 }
