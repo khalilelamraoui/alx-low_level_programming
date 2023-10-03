@@ -1,4 +1,4 @@
-# Malloc Free Module
+# Malloc and Free
 <hr>
 <ul>
 	<li>What is the difference between automatic and dynamic allocation</li>
