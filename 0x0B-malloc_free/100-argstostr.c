@@ -40,6 +40,6 @@ char *argstostr(int ac, char **av)
 		id++;
 	}
 	result[id] = '\n';
-	result[id - 1] = '\0';
+	result[id + 1] = '\0';
 	return (result);
 }
