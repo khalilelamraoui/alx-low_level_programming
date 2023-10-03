@@ -39,6 +39,7 @@ char *argstostr(int ac, char **av)
 		result[id] = '\n';
 		id++;
 	}
+	result[id] = '\n';
 	result[id - 1] = '\0';
 	return (result);
 }
