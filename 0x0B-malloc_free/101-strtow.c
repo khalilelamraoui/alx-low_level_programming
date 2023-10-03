@@ -7,45 +7,44 @@
  */
 char **strtow(char *str)
 {
-	int num_words = 0;
-	char **words, *token;
-	int i = 0, j = 0;
+	int len = strlen(str), num_words = 0, j, i;
+	int start = 0, index = 0, length;
+	char **words = NULL;
 
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
-	while (str[j] == ' ')
-		j++;
-
-	for (j = 0; str[j] != '\0'; j++)
+	if (str == NULL || *str == '\0')
+		return NULL;
+	for (i = 0; i < len; i++)
 	{
-		if (str[j] == ' ')
-		{
+		if (str[i] != ' ' && (i == 0 || str[i - 1] == ' '))
 			num_words++;
-			while (str[j] == ' ')
-				j++;
-		}
 	}
-
+	if (num_words == 0)
+		return NULL;
 	words = (char **)malloc((num_words + 1) * sizeof(char *));
 	if (words == NULL)
-		return (NULL);
-
-	token = strtok(str, " ");
-	while (token != NULL)
+		return NULL;
+	for (i = 0; i <= len; i++)
 	{
-		words[i] = strdup(token);
-		if (words[i] == NULL)
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			for (j = 0; j < i; j++)
+			length = i - start;
+			if (length > 0)
 			{
-				free(words[j]);
+				words[index] = malloc((length + 1) * sizeof(char));
+				if (words[index] == NULL)
+				{
+					for (j = 0; j < index; j++)
+						free(words[j]);
+					free(words);
+					return NULL;
+				}
+				strncpy(words[index], str + start, length);
+				words[index][length] = '\0';
+				index++;
 			}
-			free(words);
-			return (NULL);
+			start = i + 1;
 		}
-		i++;
-		token = strtok(NULL, " ");
 	}
-	words[i] = NULL;
-	return (words);
+	words[num_words] = NULL;
+	return words;
 }
