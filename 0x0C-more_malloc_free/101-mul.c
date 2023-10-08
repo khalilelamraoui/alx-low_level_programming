@@ -10,7 +10,7 @@ int _isdigit(char *str)
 	while (*str)
 	{
 		if (*str < '0' || *str > '9')
-			return 0;
+			return (0);
 		str++;
 	}
 	return (1);
@@ -56,6 +56,12 @@ int multiply(char *num1, char *num2)
 	free(res);
 	return (result);
 }
+/**
+ * main - check the code for
+ * @argc: The number of command-line arguments.
+ * @argv: An array of strings containing the command-line arguments.
+ * Return: Always 0.
+ */
 int main(int argc, char *argv[])
 {
 	int result;
