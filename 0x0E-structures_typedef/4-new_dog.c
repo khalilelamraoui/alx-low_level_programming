@@ -8,7 +8,8 @@
  * @age: Age of the dog (float)
  * @owner: Pointer to a character array (owner's name)
  *
- * Return: Pointer to the new dog (struct dog) or NULL if memory allocation fails
+ * Return: Pointer to the new dog (struct dog)
+ * or NULL if memory allocation fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -21,15 +22,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_dog->name == NULL)
 	{
 		free(new_dog);
-		return(NULL);
+		return (NULL);
 	}
 	new_dog->owner = owner;
 	if (new_dog->owner == NULL)
 	{
 		free(new_dog->name);
 		free(new_dog);
-		return(NULL);
+		return (NULL);
 	}
 	new_dog->age = age;
-	return(new_dog);
+	return (new_dog);
 }
