@@ -1,5 +1,10 @@
 #include"variadic_functions.h"
-
+/**
+ * print_strings - Print strings followed by a new line
+ * @separator: The string to be printed between strings (or NULL)
+ * @n: The number of strings passed to the function
+ * @...: Variable number of strings
+ */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
