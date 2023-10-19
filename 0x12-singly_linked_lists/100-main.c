@@ -8,6 +8,7 @@ void pre_main_message(void);
 int main(void)
 {
 	pre_main_message();
-	printf("(A tortoise, having pretty good sense of a hare's nature, challenges one to a race.)\n");
+	printf("(A tortoise, having pretty good sense
+		of a hare's nature, challenges one to a race.)\n");
 	return (0);
 }
