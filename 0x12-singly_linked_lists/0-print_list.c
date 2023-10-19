@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "lists.h"  // Assuming you have a header file for your list structure
+#include "lists.h"
 
 size_t print_list(const list_t *h)
 {
-    size_t count = 0;  // Initialize a counter to keep track of the number of nodes
+    size_t count = 0;
 
     while (h != NULL) {
         if (h->str == NULL)
@@ -14,9 +14,9 @@ size_t print_list(const list_t *h)
         {
             printf("[%d] %s\n", h->len, h->str);
         }
-        h = h->next;  // Move to the next node
-        count++;      // Increment the count
+        h = h->next;
+        count++;
     }
 
-    return (count);  // Return the number of nodes
+    return (count);
 }
