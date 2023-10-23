@@ -44,5 +44,9 @@ listint_t *add_nodeint(listint_t **head, const int n);
  * Return: The address of the new element, or NULL if it fails
  */
 listint_t *add_nodeint_end(listint_t **head, const int n);
-
+/**
+ * free_listint - Frees a listint_t list
+ * @head: A pointer to the head of the list
+ */
+void free_listint(listint_t *head);
 #endif
