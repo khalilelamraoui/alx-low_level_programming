@@ -68,5 +68,11 @@ int pop_listint(listint_t **head);
  * Return: The nth node, or NULL if the node does not exist
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+/**
+ * sum_listint - Returns the sum of all the data (n) of a listint_t linked list.
+ * @head: A pointer to the head of the list
+ * Return: The sum of all data, or 0 if the list is empty
+ */
+int sum_listint(listint_t *head);
 
 #endif
