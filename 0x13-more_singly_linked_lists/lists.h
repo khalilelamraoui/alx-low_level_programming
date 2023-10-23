@@ -74,5 +74,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
  * Return: The sum of all data, or 0 if the list is empty
  */
 int sum_listint(listint_t *head);
+/**
+ * insert_nodeint_at_index - Inserts a new node at a given position.
+ * @head: A pointer to a pointer to the head of the list
+ * @idx: The index where the new node should be added, starting at 0
+ * @n: The integer data for the new node
+ * Return: The address of the new node, or NULL if it failed
+ */
+listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 
 #endif
