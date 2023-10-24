@@ -1,6 +1,7 @@
 #include "lists.h"
 /**
- * print_listint_safe - Prints a listint_t linked list and handles cycles safely.
+ * print_listint_safe - Prints a listint_t linked
+ * list and handles cycles safely.
  * @head: A pointer to the head of the list.
  * Return: The number of nodes in the list.
  */
