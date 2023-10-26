@@ -46,6 +46,12 @@ int set_bit(unsigned long int *n, unsigned int index);
  * Return: 1 if it worked, or -1 if an error occurred.
  */
 int clear_bit(unsigned long int *n, unsigned int index);
-
+/**
+ * flip_bits - Returns the number of bits needed to flip to get from n to m.
+ * @n: The first unsigned long integer.
+ * @m: The second unsigned long integer.
+ * Return: The number of bits that need to be flipped.
+ */
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
 
 #endif
