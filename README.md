@@ -4,7 +4,7 @@ This repository contains various C programming projects categorized by their res
 
 ## Projects
 
-### [0x00-hello_world](./0x00-hello_world)
+#### [0x00-hello_world](./0x00-hello_world)
 
 ### [0x01-variables_if_else_while](./0x01-variables_if_else_while)
 
