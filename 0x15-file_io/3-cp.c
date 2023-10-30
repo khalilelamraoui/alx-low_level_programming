@@ -49,15 +49,18 @@ int main(int argc, char *argv[])
 		print_error(98, argv[1]);
 		return (98);
 	}
-	file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP);
-	if (file_to == -1) {
+	file_to = open(argv[2], O_WRONLY | O_CREAT |
+			O_TRUNC, S_IRUSR | S_IWUSR | S_IRGRP);
+	if (file_to == -1)
+	{
 		print_error(99, argv[2]);
 		return (99);
 	}
 	while ((bytes_read = read(file_from, buffer, BUF_SIZE)) > 0)
 	{
 		bytes_written = write(file_to, buffer, bytes_read);
-		if (bytes_written != bytes_read) {
+		if (bytes_written != bytes_read)
+		{
 			print_error(99, argv[2]);
 			close(file_from);
 			close(file_to);
