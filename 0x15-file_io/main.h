@@ -7,6 +7,8 @@
 #include <fcntl.h>
 #include <errno.h>
 #include <sys/stat.h>
+#include <elf.h>
+#include <string.h>
 
 /**
  * read_textfile - Reads a text file and prints it to the POSIX standard output
