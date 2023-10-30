@@ -15,6 +15,13 @@
  * write the expected amount of bytes, or if filename is NULL
  */
 ssize_t read_textfile(const char *filename, size_t letters);
+/**
+ * create_file - Creates a file and writes text content to it
+ * @filename: The name of the file to create
+ * @text_content: The text content to write to the file
+ * Return: 1 on success, -1 on failure
+ */
+int create_file(const char *filename, char *text_content);
 
 
 #endif
