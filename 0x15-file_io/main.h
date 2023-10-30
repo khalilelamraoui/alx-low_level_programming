@@ -22,6 +22,13 @@ ssize_t read_textfile(const char *filename, size_t letters);
  * Return: 1 on success, -1 on failure
  */
 int create_file(const char *filename, char *text_content);
+/**
+ * append_text_to_file - Appends text to the end of a file
+ * @filename: The name of the file
+ * @text_content: The text content to append
+ * Return: 1 on success, -1 on failure
+ */
+int append_text_to_file(const char *filename, char *text_content);
 
 
 #endif
