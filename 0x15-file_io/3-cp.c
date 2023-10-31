@@ -37,7 +37,6 @@ int main(int argc, char *argv[])
 	int file_from, file_to;
 	ssize_t bytes_read, bytes_written;
 	char buffer[BUF_SIZE];
-	struct stat source_stat;
 
 	if (argc != 3)
 	{
@@ -56,20 +55,6 @@ int main(int argc, char *argv[])
 	{
 		print_error(99, argv[2]);
 		return (99);
-	}
-	if (fstat(file_from, &source_stat) == -1)
-	{
-		print_error(98, argv[1]);
-		close(file_from);
-		close(file_to);
-		return (98);
-	}
-	if (fchmod(file_to, source_stat.st_mode) == -1)
-	{
-		print_error(100, argv[2]);
-		close(file_from);
-		close(file_to);
-		return (100);
 	}
 	while ((bytes_read = read(file_from, buffer, BUF_SIZE)) > 0)
 	{
