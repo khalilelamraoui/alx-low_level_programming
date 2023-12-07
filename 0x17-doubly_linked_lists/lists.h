@@ -37,5 +37,9 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n);
  * add_dnodeint_end - Adds a new node at the end of a dlistint_t list.
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+/**
+ * free_dlistint - Frees a dlistint_t list.
+ */
+void free_dlistint(dlistint_t *head);
 
 #endif
