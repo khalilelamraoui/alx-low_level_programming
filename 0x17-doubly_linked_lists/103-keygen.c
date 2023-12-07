@@ -9,39 +9,36 @@
  */
 int main(int argc, char *argv[])
 {
-	char *charset = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6\
-    fxqZeF3Qa1rPhdKIouk";
-	char key[7] = "      ";
-	size_t len = strlen(argv[1]);
-	unsigned int add = 0, b = 1;
-	size_t i;
+    char *l;
+	unsigned int counter, b;
+	size_t length, add;
+	char generatedKey[7] = "      ";
 
+    l = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 	if (argc != 2)
 	{
 		printf("Correct usage: ./keygen5 username\n");
 		return (1);
 	}
-	key[0] = charset[(len ^ 59) & 63];
-	for (i = 0; i < len; i++)
-		add += argv[1][i];
-	key[1] = charset[(add ^ 79) & 63];  
-	for (i = 0; i < len; i++)
-		b *= argv[1][i];
-	key[2] = charset[(b ^ 85) & 63];
-	b = (unsigned char)argv[1][0];
-	for (i = 0; i < len; i++)
-		if ((unsigned char)b <= (unsigned char)argv[1][i])
-			b = (unsigned char)argv[1][i];
+	length = strlen(argv[1]);
+	generatedKey[0] = l[(length ^ 59) & 63];
+	for (counter = 0, add = 0; counter < length; counter++)
+		add += argv[1][counter];
+	generatedKey[1] = l[(add ^ 79) & 63];
+	for (counter = 0, b = 1; counter < length; counter++)
+		b *= argv[1][counter];
+	generatedKey[2] = l[(b ^ 85) & 63];
+	for (b = argv[1][0], counter = 0; counter < length; counter++)
+		if ((char)b <= argv[1][counter])
+			b = argv[1][counter];
 	srand(b ^ 14);
-	key[3] = charset[rand() & 63];
-	b = 0;
-	for (i = 0; i < len; i++)
-		b += argv[1][i] * argv[1][i];
-	key[4] = charset[(b ^ 239) & 63];
-	b = 0;
-	for (i = 0; (unsigned char)i < (unsigned char)argv[1][0]; i++)
+	generatedKey[3] = l[rand() & 63];
+	for (b = 0, counter = 0; counter < length; counter++)
+		b += argv[1][counter] * argv[1][counter];
+	generatedKey[4] = l[(b ^ 239) & 63];
+	for (b = 0, counter = 0; (char)counter < argv[1][0]; counter++)
 		b = rand();
-	key[5] = charset[(b ^ 229) & 63];
-	printf("%s\n", key);
+	generatedKey[5] = l[(b ^ 229) & 63];
+	printf("%s\n", generatedKey);
 	return (0);
 }
