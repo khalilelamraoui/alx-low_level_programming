@@ -21,7 +21,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(newHead);
 		return (1);
 	}
-	i = 1;
 	while (newHead)
 	{
 		if (i == index)
