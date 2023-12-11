@@ -54,7 +54,8 @@ int _strlen(char *s);
 void _puts(char *s);
 /*
     * *_strcpy - copies the string pointed to by src
-    * including the terminating null byte (\0), to the buffer pointed to by dest
+    * including the terminating null byte (\0)
+    * to the buffer pointed to by dest
     * @dest: The character to print
     * @src: The character to print
     * Return: On success 1.
@@ -140,4 +141,5 @@ char *_strpbrk(char *s, char *accept);
     * Return: On success 1.
 */
 char *_strstr(char *haystack, char *needle);
-#endif
+
+#endif /* MAIN_H */
